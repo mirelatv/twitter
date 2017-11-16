@@ -1,0 +1,52 @@
+body{
+padding: auto;
+margin: auto;
+}
+.head{
+
+  background-color: #E6A607;
+  height: inherit;
+  width: inherit;
+}
+
+span{
+  display: block;
+  font-style: italic;
+  color:white;
+  text-align: center;
+  font-size: 30px;
+
+}
+.contaner {
+background-repeat: no-repeat;
+background-image: url('http://todofondos.com/bin/fondos/01/20/87d.jpg');
+background-size: cover;
+}
+
+.text{
+background-image: url('https://www.fondosypantallas.com/wp-content/uploads/2009/09/nature_272.jpg');
+width: 480px;
+height: 280px;
+margin-left: 50px;
+}
+
+.caracteres{
+
+background-color: white;
+width: 30px;
+margin-left: 430px;
+}
+
+.texto{
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.send{
+  margin-left: 20px;
+  width: 40px;
+  height: 20px;
+  color:brown;
+}
+
+}
