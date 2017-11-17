@@ -1,42 +1,38 @@
-/*Si pasa los 140 caracteres, deshabilitar el botón.
-Si pasa los 120 caracteres, mostrar el contador con OTRO color.
-Si pasa los 130 caracteres, mostrar el contador con OTRO color.
-Si pasa los 140 caracteres, mostrar el contador en negativo.
-}*/
 
-/*Creando variables*/
-var texto = document.querySelector(".texto");
+/* Creando variables*/
+var texto = document.querySelector('.texto');
 var contador = 140;
-var displayContador=document.querySelector(".caracteres");
-var save=document.querySelector(".send");
-
-/*eventos*/
-texto.addEventListener("keyup", count);
-save.addEventListener("click",saving);
-
-/*adiriendo evento de conteo-Si pasa los 140, mostrar el contador en negativo/event- keyup*/
-function count(event){
-var total=texto.value.length;
-contador = 140 - total;
-displayContador.textContent = contador;
-}
-
-/*salvando texto*/
+var displayContador = document.querySelector('.caracteres');
+var save = document.querySelector('.btn');
+var form = document.querySelector('.fpb');
+var containerPrincipal = document.querySelector('.container-principal');
 
 
-function saving(event){
-if(0<total<=140){
-save.disable()="false"}
-else{save.disable()="true"}
-}
+/* adiriendo evento de conteo-Si pasa los 140, mostrar el contador en negativo/event- keyup*/
+texto.addEventListener('keyup', function() {
+  var letras = this.value.length;
+  contador = 140 - letras;
+  displayContador.textContent = contador;
+});
 
+/* Cambio de colores en el contador*/
+texto.addEventListener('keyup', function() {
+  var contLetter = texto.value.length;
+  if (0 < contLetter && contLetter < 120) {
+    displayContador.classList.add('black');
+  } else if (120 < contLetter < 131) {
+    displayContador.classList.add('blue');
+  } else {
+    displayContador.classList.add('red');
+  }
+});
 
-
-
-
-
-/*adiriendo de desabilitar el input con mas de 140 caracteres
-var sendInfo= document.querySelector(".enviar")
-function Condition(){
-if(total=(x<0)){
-sendInfo.setAtribute("disabled",true);*/
+/* Desabilitar el Button*/
+save.addEventListener('click', function(event) {
+  console.log(event);
+  var referencial = texto.value.length ;
+  referencial > 140;
+  save.disabled = true;
+  referencial < 140;
+  save.isTrusted = true ;
+});
