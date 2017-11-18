@@ -6,6 +6,7 @@ var displayContador = document.querySelector('.caracteres');
 var save = document.querySelector('.btn');
 var form = document.querySelector('.fpb');
 var containerPrincipal = document.querySelector('.container-principal');
+var contText = document.querySelector('.text');
 /* var Chracteres = document.querySelector('.caracteres');*/
 
 
@@ -40,15 +41,24 @@ save.addEventListener('click', function(event) {
   containerPrincipal.insertBefore(newBox, containerPrincipal.firstElementChild);
   texto.value = ('');
 });
-/* desabilitando el boton de twittear al ingresar texto vacio y pasado los 140 caracteres*/
+/* desabilitando el boton de twittear al ingresar texto pasado los 140 caracteres*/
 texto.addEventListener('keyup', function(event) {
-  var theLetter = texto.value;
-  var largeLetter = theLetter.length;
-  if (largeLetter > 140) {
+  var theLetter = texto.value.length;
+  if (theLetter > 140) {
     save.disabled = true;
   }
   var theLetter = texto.value;
-  if (theLetter === (' ')) {
+  if (theLetter === ' ') {
     save.disabled = true;
   }
+});
+
+/* Textarea  incrementa  con el contenido*/
+texto.addEventListener('keyup', function() {
+  texto.style.height = 'auto';
+  texto.style.height = texto.scrollHeight + 'px';
+});
+contText.addEventListener('keyup', function() {
+  contText.style.height = 'auto';
+  contText.style.height = contText.scrollHeight + 'px';
 });

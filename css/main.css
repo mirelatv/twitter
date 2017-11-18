@@ -1,51 +1,63 @@
 body{
-padding: auto;
-margin: auto;
+  margin:0;
+  padding:0;
+  background-repeat: no-repeat;
+  background-image: url('https://wallpaperstock.net/wallpapers/thumbs1/52944wide.jpg');
+  background-size: cover;
 }
-.head{
 
+.head{
   background-color: #E6A607;
   height: inherit;
   width: inherit;
 }
-
 span{
   display: block;
   font-style: italic;
   color:white;
   text-align: center;
   font-size: 30px;
-
 }
-.contaner {
-background-repeat: no-repeat;
-background-image: url('http://todofondos.com/bin/fondos/01/20/87d.jpg');
-background-size: cover;
+
+.hello{
+  display: inline-block;
+  background-image: url('https://previews.123rf.com/images/lenta/lenta0909/lenta090900027/5521914-transparent-leaves-Stock-Photo-skeleton-leaf.jpg');
+  margin-left: 120px;
+  margin-right: 350px;
+  margin-bottom: 140px;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  width: 240px;
+  height: 180px;
+  transform: translateY(-50%);
 }
 
 .text{
-background-image: url('https://www.fondosypantallas.com/wp-content/uploads/2009/09/nature_272.jpg');
+background-image: url('https://previews.123rf.com/images/lenta/lenta0909/lenta090900027/5521914-transparent-leaves-Stock-Photo-skeleton-leaf.jpg');
+display: inline-block;
+box-sizing: border-box;
+border-radius: 20px;
 width: 500px;
 height: 280px;
-margin-left: 80px;
-}
-
-.caracteres{
-
-background-color: white;
-width: 50px;
-margin-left: 20px;
-border-radius: 20px;
-border:1px brown;
-text-align: center;
-
+margin-top: 100px;
+margin-right: 130px;
 }
 
 .texto{
-margin-left: 20px;
-margin-top: 20px;
+margin-left: 30px;
+margin-top: 40px;
+overflow:hidden;
+outline:none;
+border-radius: 20px;
 }
 
+.fpb{
+  width: 80px;
+  height: 20px;
+
+  box-sizing: border-box;
+}
 .btn{
   margin-left: 340px;
   width: 80px;
@@ -53,6 +65,18 @@ margin-top: 20px;
   color:blue;
   border-radius: 20px;
   border:1px brown;
+  transform: translateY(-40%)
+
+}
+.caracteres{
+
+background-color: white;
+width: 50px;
+margin-left: 20px;
+margin-bottom: -18px;
+border-radius: 20px;
+border:1px brown;
+text-align: center;
 }
 
 .black{
@@ -89,7 +113,7 @@ border-radius: 20px;
 border:1px brown;
 color:blue;
 height: auto;
-width: 500px;
+width: auto;
 padding: 10px;
 margin-left: 80px;
 text-align: center;
@@ -97,5 +121,4 @@ text-align: center;
 .saveColor{
 background-color:#7df;
 color:white;
-
 }
