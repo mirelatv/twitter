@@ -6,12 +6,13 @@ var displayContador = document.querySelector('.caracteres');
 var save = document.querySelector('.btn');
 var form = document.querySelector('.fpb');
 var containerPrincipal = document.querySelector('.container-principal');
+/* var Chracteres = document.querySelector('.caracteres');*/
 
 
 /* adiriendo evento de conteo-Si pasa los 140, mostrar el contador en negativo/event- keyup*/
-texto.addEventListener('keyup', function() {
-  var letras = this.value.length;
-  contador = 140 - letras;
+texto.addEventListener('keyup', function(event) {
+  var letter = this.value.length;
+  contador = 140 - letter;
   displayContador.textContent = contador;
 });
 
@@ -19,20 +20,35 @@ texto.addEventListener('keyup', function() {
 texto.addEventListener('keyup', function() {
   var contLetter = texto.value.length;
   if (0 < contLetter && contLetter < 120) {
-    displayContador.classList.add('black');
-  } else if (120 < contLetter < 131) {
-    displayContador.classList.add('blue');
-  } else {
-    displayContador.classList.add('red');
+    displayContador.className = 'black';
+  } else if (120 < contLetter && contLetter < 130) {
+    displayContador.className = 'blue';
+  } else if (130 < contLetter) {
+    displayContador.className = 'red' ;
   }
 });
 
-/* Desabilitar el Button*/
+/* Creando hijos asignandole classe , padre - Para contenedor de texto ya twiteado*/
 save.addEventListener('click', function(event) {
-  console.log(event);
-  var referencial = texto.value.length ;
-  referencial > 140;
-  save.disabled = true;
-  referencial < 140;
-  save.isTrusted = true ;
+  var newBox = document.createElement('div');
+  var saveTwit = document.createElement('p');
+  containerPrincipal.appendChild(newBox);
+  newBox.appendChild(saveTwit);
+  saveTwit.classList.add('paragraph');
+  saveTwit.textContent = texto.value;
+  /* Inserto antes del primer hijo*/
+  containerPrincipal.insertBefore(newBox, containerPrincipal.firstElementChild);
+  texto.value = ('');
+});
+/* desabilitando el boton de twittear al ingresar texto vacio y pasado los 140 caracteres*/
+texto.addEventListener('keyup', function(event) {
+  var theLetter = texto.value;
+  var largeLetter = theLetter.length;
+  if (largeLetter > 140) {
+    save.disabled = true;
+  }
+  var theLetter = texto.value;
+  if (theLetter === (' ')) {
+    save.disabled = true;
+  }
 });
