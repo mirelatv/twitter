@@ -5,7 +5,6 @@ body{
   background-image: url('https://wallpaperstock.net/wallpapers/thumbs1/52944wide.jpg');
   background-size: cover;
 }
-
 .head{
   background-color: #E6A607;
   height: inherit;
@@ -23,14 +22,14 @@ span{
   display: inline-block;
   background-image: url('https://previews.123rf.com/images/lenta/lenta0909/lenta090900027/5521914-transparent-leaves-Stock-Photo-skeleton-leaf.jpg');
   margin-left: 120px;
-  margin-right: 350px;
+  margin-right: 250px;
   margin-bottom: 140px;
   background-color: white;
   text-align: center;
   border-radius: 20px;
-  width: 240px;
-  height: 180px;
-  transform: translateY(-50%);
+  width: 300px;
+  height: 200px;
+  transform: translateY(-60%);
 }
 
 .text{

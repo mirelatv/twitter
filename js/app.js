@@ -29,7 +29,7 @@ texto.addEventListener('keyup', function() {
   }
 });
 
-/* Creando hijos asignandole classe , padre - Para contenedor de texto ya twiteado*/
+/* Creando hijos asignandole classe , padre - contenedor de texto ya twiteado y hora*/
 save.addEventListener('click', function(event) {
   var newBox = document.createElement('div');
   var saveTwit = document.createElement('p');
@@ -37,10 +37,14 @@ save.addEventListener('click', function(event) {
   newBox.appendChild(saveTwit);
   saveTwit.classList.add('paragraph');
   saveTwit.textContent = texto.value;
+  var time = document.createElement('p');
+  time.textContent = timeDate();
+  saveTwit.appendChild(time);
   /* Inserto antes del primer hijo*/
   containerPrincipal.insertBefore(newBox, containerPrincipal.firstElementChild);
   texto.value = ('');
 });
+
 /* desabilitando el boton de twittear al ingresar texto pasado los 140 caracteres*/
 texto.addEventListener('keyup', function(event) {
   var theLetter = texto.value.length;
@@ -62,3 +66,16 @@ contText.addEventListener('keyup', function() {
   contText.style.height = 'auto';
   contText.style.height = contText.scrollHeight + 'px';
 });
+
+/* Agregando funcion de hora*/
+var timeDate = function() {
+  var date = new Date();
+  var time = date.getHours() + ':' + date.getMinutes();
+  var timeAbsolute = '';
+  if (date.getHours() <= 12) {
+    timeAbsolute = time + ' AM';
+  } else {
+    timeAbsolute = time + ' PM';
+  }
+  return timeAbsolute;
+};
